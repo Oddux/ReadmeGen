@@ -1,5 +1,6 @@
 // TODO: Include packages needed for this application
 var inquirer = require("inquirer");
+const fs = require('fs');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -57,39 +58,43 @@ function writeToFile(fileName, data) {}
 function init() {
   inquirer.prompt(questions).then((answers) => {
     var template = `# ${answers.title}
-            ## Description
-                ${answers.description}
+## Description
+    ${answers.description}
 
-            ## Table of Contents
-            - [Installation](#installation)
-            - [Usage](#usage)
-            - [License](#license)
-            - [Contributing](#contributing)
-            - [Tests](#tests)
-            - [Questions](#questions)
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-            ## Installation
-            ${answers.installation}
+## Installation
+${answers.installation}
 
-            ## Usage
-            ${answers.usage}
+## Usage
+${answers.usage}
 
-            ## License
-            ${answers.license}
+## License
+${answers.license}
 
-            ## Contributing
-            ${answers.contributing}
+## Contributing
+${answers.contributing}
 
-            ## Tests
-            ${answers.tests}
+## Tests
+${answers.tests}
 
-            ## Questions
-            ${answers.github}
-            ${answers.contact}
-            `;
+## Questions
+${answers.github}
+${answers.contact}
+`;
 
             console.log(template);
+            fs.writeFile('README.md', template, (err) =>
+            err ? console.error(err) : console.log('Success!')
+            );
   });
+  
 }
 
 // Function call to initialize app
