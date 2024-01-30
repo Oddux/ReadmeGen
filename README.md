@@ -1,6 +1,6 @@
 # ReadmeGen
 ## Description
-As a developer, I wanted to create a README generator that would allow me to quickly build a high-quality README file from the command line interface SO THAT I can quickly create a professional README for a new project
+As a developer, I wanted to create a README generator that would allow me to quickly build a high-quality README file from the command line interface SO THAT I can quickly create a professional README for a new project.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -19,6 +19,11 @@ Clone repository code from github to local machine. In the command line interfac
 * Open integrated terminal in ReadmeGen folder.
 * Run "node index.js" from integrated terminal.
 * Fill out prompts.
+![UsageScreenshot](./assets/ScreenshotReadmeGen.png)
+
+## Video
+[Usage Video](https://drive.google.com/file/d/18SYZMLDEyQDGROfChSlqHsZPryizR11m/view)
+
 
 ## License
 MIT
