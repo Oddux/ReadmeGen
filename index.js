@@ -26,9 +26,19 @@ const questions = [
     message: "Describe how the application is intended to be used.",
   },
   {
-    type: "input",
     name: "license",
-    message: "What license is used by the project?",
+    message: "What kind of license should your project have?",
+    type: "list",
+    choices: [
+      { name: "MIT License", value: "MIT" },
+      { name: "GNU AGPLv3", value: "AGPL-3.0" },
+      { name: "GNU GPLv3", value: "GPL-3.0" },
+      { name: "GNU LGPLv3", value: "LGPL-3.0" },
+      { name: "Mozilla Public License 2.0", value: "MPL-2.0" },
+      { name: "Apache License 2.0", value: "Apache-2.0" },
+      { name: "Boost Software License 1.0", value: "BSL-1.0" },
+      { name: "The Unlicense", value: "" },
+    ],
   },
   {
     type: "input",
